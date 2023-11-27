@@ -1,0 +1,45 @@
+<!-- todo-container.component.html -->
+<div class="container mt-5">
+  <div class="header">
+    <h2>Todo List</h2>
+    <button class="btn btn-primary" (click)="openCreateTodoModal()">Create</button>
+  </div>
+
+  <div class="row" cdkDropListGroup>
+    <div class="col" cdkDropList [cdkDropListData] = "metaData.pendingItems" (cdkDropListDropped)="onDrop('pendingItems', $event)" id="pendingItems">
+      <div class="card">
+        <div class="card-header">
+          Pending
+        </div>
+        <div class="list-group" >
+          <!-- Todo items in the "Pending" column -->
+          <div *ngFor="let item of metaData.pendingItems" cdkDrag class="list-group-item" id="item">{{ item }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" cdkDropList [cdkDropListData] = "metaData.inProgressItems" (cdkDropListDropped)="onDrop('inProgressItems', $event)" id="inProgressItems">
+      <div class="card">
+        <div class="card-header">
+          In Progress
+        </div>
+        <div class="list-group" >
+          <!-- Todo items in the "In Progress" column -->
+          <div *ngFor="let item of metaData.inProgressItems" cdkDrag class="list-group-item" cdkDragHandle>{{ item }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" cdkDropList [cdkDropListData] = "metaData.doneItems"  (cdkDropListDropped)="onDrop('doneItems', $event)" id="doneItems">
+      <div class="card">
+        <div class="card-header">
+          Done
+        </div>
+        <div class="list-group">
+          <!-- Todo items in the "Done" column -->
+          <div *ngFor="let item of metaData.doneItems" cdkDrag class="list-group-item" cdkDragHandle>{{ item }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
