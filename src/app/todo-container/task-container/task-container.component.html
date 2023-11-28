@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">
+      {{title}}
+    </div>
+    <div class="list-group" >
+      <div *ngFor="let item of taskList" cdkDrag class="list-group-item" id="item">{{ item }}</div>
+    </div>
+</div>

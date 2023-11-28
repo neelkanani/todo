@@ -59,3 +59,20 @@ Create New Task Component
 
 - Ngb Modal used
 - Link - https://ng-bootstrap.github.io/#/components/modal/examples
+
+<!-- Thinking about making the todo container as common for all
+Idea is to create a reusable component
+For more neater quality code -->
+
+<!-- The approach - Create a component add all HTML & styling
+Check it for pending & in progress first
+Check for the communication between those components second
+Check if it works flawlessly with the Done container third
+If it works User can have the 4th container whenever needed with very less dev effort.-->
+
+<!-- Execution
+Created task container
+Gave 2 Inputs
+And accessing it dynamically to access it. -->
+
+<!-- Due to Time Crunch couldn't write Test cases end to end -->

@@ -7,12 +7,14 @@ import { TodoContainerComponent } from './todo-container.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TaskContainerComponent } from './task-container/task-container.component';
 
 
 @NgModule({
   declarations: [
     TodoContainerComponent,
-    CreateTaskComponent
+    CreateTaskComponent,
+    TaskContainerComponent
   ],
   imports: [
     CommonModule,
